@@ -1,0 +1,89 @@
+﻿@{
+    ViewBag.Title = "AddCategory";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model List<MvcApplication1.Model.Category>
+<div class="main-content">
+    <div class="left-sidebar">
+        <div class="left-sidebar-top">
+            <h3><span>Admin </span>Panel</h3>
+
+            <ul>
+                <li><a href="#">Add Category</a></li>
+                <li><a href="#">Edit Profile</a></li>
+                <li><a href="#">Block User</a></li>
+                <div class="clear"> </div>
+            </ul>
+        </div>
+        <div class="clear"> </div>
+        <div class="left-sidebar-bottom">
+            <h3><span>Fresh</span> Recipes</h3>
+            <a href="#"><img src="~/images/fresh1.jpg" title="image-name" /></a>
+            <a class="heading" href="#">Bonorum et Maltextorum Bonorum et</a>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <a class="button" href="#">Read more</a>
+        </div>
+        <div class="cooking-banner1">
+            <a href="#"><img src="~/images/banner1.png" title="image-name" /></a>
+        </div>
+        <div class="clear"> </div>
+    </div>
+    <div class="center-content">
+        <!---start-about---->
+        <div class="about">
+            <h3>Add Category</h3>
+
+            <form method="post" action="/Admin/AddCategoryToDB" enctype="multipart/form-data">
+                <fieldset>
+                    <div>
+                        <a class="pull-left ">Enter Category:</a>
+
+
+                        <input type="text" class="inp-form" name="Category1" />
+                    </div>
+                    <br />
+                    
+
+                    <input type="submit" value="ADD" class="form-submit" />
+                    <input type="reset" value="" class="form-reset" />
+                </fieldset>
+
+            </form>
+            
+        </div>
+
+        <div id="table-content">
+
+
+            <form id="mainform" action="">
+
+                <table border="1" width="100%" cellpadding="0" cellspacing="0" id="product-table">
+
+                    <tr>
+                        <th class="table-header-repeat line-left minwidth-1"><a href="">Categories</a>	</th>
+                      
+                    @foreach (var i in Model)
+                    {
+                        <tr>
+                            <td>@i.Category1</td>
+                            
+
+
+                            <td class="options-width">
+
+                                <!-- <a href="/Admin/DeleteUser" title=" delete" class="icon-2 info-tooltip"></a>-->
+                               
+                            </td>
+                        </tr>
+                    }
+                </table>
+                <!--  end product-table................................... -->
+            </form>
+        </div>
+
+        <!---End-about---->
+    </div>
+    <div class="clear"> </div>
+    <!----End-main-content----->
+</div>

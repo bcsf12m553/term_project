@@ -1,0 +1,142 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+
+@model List<MvcApplication1.Model.Category>
+<!DOCTYPE html>
+<html>
+
+
+<body>
+    <link href="~/Content/signin/css/bootstrap.css" rel="stylesheet" />
+    <script src="~/Content/signin/css/bootstrap.css"></script>
+
+
+    <!---start-wrap---->
+
+    <div class="main">
+        <!---start-header---->
+        <div class="top-header">
+            <div class="top-nav" >
+                <ul>
+                    <li class="active"><a href="~/Home/index">Home</a></li>
+                    <li><a href="~/Home/newrecipes">New Recipes</a></li>
+                    <li><a href="~/Home/chef">Chefs</a></li>
+                    <li><a href="~/Home/news">News</a></li>
+                    <li><a href="~/Home/contact">Contact</a></li>
+                    <li><a href="~/Home/about">Top 10 Recipes</a></li>
+                    </ul>
+                <div class="clear"> </div>
+            </div>
+        </div>
+        <!---End-header---->
+        <!---start-content----->
+        <div class="content">
+            <!---start-logo-with-slider----->
+            <div class="logo-slider">
+                <div class="logo">
+                    <a href="index.html"><img src="~/images/logo.png" title="logo" /></a>
+                </div>
+                <!--start-image-slider---->
+                <div class="image-slider">
+                    <!-- Slideshow 1 -->
+                    <ul class="rslides" id="slider1">
+                        <li><img src="~/images/slider1.jpg" alt=""></li>
+                        <li><img src="~/images/slider3.jpg" alt=""></li>
+                        <li><img src="~/images/slider1.jpg" alt=""></li>
+                        <li><img src="~/images/snacks.jpg" alt=""></li>
+                        <li><img src="~/images/pizza.jpg" alt=""></li>
+                        <li><img src="~/images/cookie.jpg" alt=""></li>
+                    </ul>
+                    <!-- Slideshow 2 -->
+                </div>
+                <!--End-image-slider---->
+                <div class="clear"> </div>
+            </div>
+            <div class="clear"> </div>
+            <!---End-logo-with-slider----->
+            <!----start-main-content----->
+            <div class="main-content">
+                <div class="left-sidebar">
+                    <div class="left-sidebar-top">
+                        <h3>Categories</h3>
+                        <ul>
+                        @foreach (var i in Model)
+                        {
+                            <li><a href="/Home/Category">@i.Category1<span class="badge pull-right" >2</span></a></li>
+                        
+                            
+                            
+                        }
+
+
+                            <div class="clear"> </div>
+                        </ul>
+                    </div>
+                    <div class="clear"> </div>
+                    <div class="left-sidebar-bottom">
+                        <h3><span>Fresh</span> Recipes</h3>
+                        <a href="#"><img src="~/images/golakabab.jpg" title="image-name" /></a>
+                        <a class="heading" href="#">Gola Kabab by Shireen Anwar</a>
+                        <p>Beef Noodles Kabab recipe by Shireen Anwar. This delightful Ramadan Recipes recipe of Beef Noodles Kabab can be ready in approximately 30 Minutes ...</p>
+                        <a class="button" href="#">Read more</a>
+                    </div>
+                    <div class="cooking-banner1">
+                        <a href="#"><img src="~/images/banner1.png" title="image-name" /></a>
+                    </div>
+                    <div class="clear"> </div>
+                </div>
+                <div class="center-content">
+                   
+                    <div class="center-content-grid">
+
+                        <h3>Today Recipes</h3>
+
+                        <div class="row">
+                            
+
+                          
+                                <div class="thumbnail" >
+                                    <img src="~/images/bandgobi.jpg" alt="...">
+                                    <div class="caption">
+                                        <h3>Gobhi Ki Sabzi Recipe</h3>
+                                        <p>Bandh Gobhi (cauliflower) is a very famous vegetable and used in many dishes. This recipe is very easy to make and you will surely like it.</p>
+                                        <p><a href="~/Home/desc" class="btn btn-primary" role="button">Read Description</a> <a href="~/Home/desc" class="btn btn-default" role="button">See Video</a></p>
+                                    </div>
+                                </div>
+
+                                <div class="thumbnail">
+                                    <img src="~/images/soup.jpg" alt="...">
+                                    <div class="caption">
+                                        <h3>Hot and Sour Soup</h3>
+                                        <p>Hot &Sour Soup is an easy Chinese-American favorite with a rich flavorful broth, feathery eggs and a pleasant balance of heat and tartness</p>
+                                        <p><a href="~/Home/desc" class="btn btn-primary" role="button">Read Description</a> <a href="~/Home/desc" class="btn btn-default" role="button">See Video</a></p>
+                                    </div>
+                                </div>
+
+
+                            
+                        
+                        
+                        
+                        
+                        </div>
+                       
+                       
+
+                    </div>
+
+                </div>
+                <div class="clear"> </div>
+                <!----End-main-content----->
+            </div>
+        </div>
+    </div>
+    
+    <!---End-wrap---->
+</body>
+</html>
+

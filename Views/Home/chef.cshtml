@@ -1,0 +1,155 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+@model List<MvcApplication1.Model.Category>
+<!DOCTYPE HTML>
+<html>
+<body>
+    <link href="~/Content/signin/css/bootstrap.css" rel="stylesheet" />
+    <script src="~/Content/signin/css/bootstrap.css"></script>
+
+    <div class="main">
+        <!---start-header---->
+        <div class="top-header">
+            <div class="top-nav">
+                <ul>
+                    <li><a href="~/Home/index">Home</a></li>
+                    
+                    <li><a href="~/Home/newrecipes">New Recipes</a></li>
+                    <li class="active"><a href="~/Home/chef">Chefs</a></li>
+                    <li><a href="~/Home/news">News</a></li>
+                    <li><a href="~/Home/contact">Contact</a></li>
+                    <li><a href="~/Home/about">Top 10 Recipes</a></li>
+                    
+                </ul>
+                <div class="clear"> </div>
+            </div>
+        </div>
+        <!---End-header---->
+        <!---start-content----->
+        <div class="content">
+            <!---start-logo-with-slider----->
+            <div class="logo-slider">
+                <div class="logo">
+                    <a href="index.html"><img src="~/images/logo.png" title="logo" /></a>
+                </div>
+                <!--start-image-slider---->
+                <div class="image-slider">
+                    <!-- Slideshow 1 -->
+                    <ul class="rslides" id="slider1">
+                        <li><img src="~/images/slider1.jpg" alt=""></li>
+                        <li><img src="~/images/slider3.jpg" alt=""></li>
+                        <li><img src="~/images/slider1.jpg" alt=""></li>
+                    </ul>
+                    <!-- Slideshow 2 -->
+                </div>
+                <!---start-wrap---->
+                <!--End-image-slider---->
+                <div class="clear"> </div>
+            </div>
+            <div class="clear"> </div>
+            <!---End-logo-with-slider----->
+            <!----start-main-content----->
+            <div class="main-content">
+                <div class="left-sidebar">
+                    <div class="left-sidebar-top">
+                        <h3>Categories</h3>
+                        <ul>
+                            @foreach (var i in Model)
+                            {
+                                <li><a href="#">@i.Category1<span class="badge pull-right">2</span></a></li>
+
+
+
+                            }
+                            <div class="clear"> </div>
+                        </ul>
+                    </div>
+                    <div class="clear"> </div>
+                    <div class="left-sidebar-bottom">
+                        <h3><span>Fresh</span> Recipes</h3>
+                        <a href="#"><img src="~/images/fresh1.jpg" title="image-name" /></a>
+                        <a class="heading" href="#">Bonorum et Maltextorum Bonorum et</a>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        <a class="button" href="#">Read more</a>
+                    </div>
+                    <div class="cooking-banner1">
+                        <a href="#"><img src="~/images/banner1.png" title="image-name" /></a>
+                    </div>
+                    <div class="clear"> </div>
+                </div>
+                <div class="center-content">
+                    <!---start-Products---->
+                    <div class="products">
+                        <h3>Most Popular Chefs</h3>
+                        <div class="product-grid">
+                            <a href="#"><img src="~/images/zakir.jpg" title="product-name" /></a>
+                            <a class="product-heading" href="#">Chef Zakir</a>
+                            <p> Muhammad Zakir Qureshi popularly in Pakistan known as Chef Zakir.</p>
+                            <a class="newricipes-button" href="#">Read more</a>
+                        </div>
+                        <div class="product-grid">
+                            <a href="#"><img src="~/images/gulzar.jpg" title="product-name" /></a>
+                            <a class="product-heading" href="#">Chef Gulzar</a>
+                            <p> He needs no introduction. Very few people are aware of the fact that before Chef Gulzar made his name in culinary.</p>
+                            <a class="newricipes-button" href="#">Read more</a>
+                        </div>
+                        <div class="product-grid product-lastgrid">
+                            <a href="#"><img src="~/images/zubaidaapa.jpg" title="product-name" /></a>
+                            <a class="product-heading" href="#">Chef Zubaida Tariq</a>
+                            <p>She is a professional leading chef of Pakistan and cooking expert.</p>
+                            <a class="newricipes-button" href="#">Read more</a>
+                        </div>
+                        <div class="product-grid">
+                            <a href="#"><img src="~/images/shireen.jpg" title="product-name" /></a>
+                            <a class="product-heading" href="#">Chef Shireen Anwar</a>
+                            <p>She is awe-inspiring, rarest and unique cooking expert.</p>
+                            <a class="newricipes-button" href="#">Read more</a>
+                        </div>
+                        <div class="product-grid">
+                            <a href="#"><img src="~/images/rida.jpg" title="product-name" /></a>
+                            <a class="product-heading" href="#">Chef Rida Aftab</a>
+                            <p>Chef Rida aftab is one of the outstanding cooking expert personality currently working for Masala TV in a highly followed cooking show “Tarka”..</p>
+                            <a class="newricipes-button" href="#">Read more</a>
+                        </div>
+                        <div class="product-grid product-lastgrid">
+                            <a href="#"><img src="~/images/shai.pg.jpg" title="product-name" /></a>
+                            <a class="product-heading" href="#">Chef Shai</a>
+                            <p> A professional and dedicated chef of Pakistan, Shai is an owner of charming personality.</p>
+                            <a class="newricipes-button" href="#">Read more</a>
+                        </div>
+                        <div class="product-grid">
+                            <a href="#"><img src="~/images/Tahir.jpg" title="product-name" /></a>
+                            <a class="product-heading" href="#">Chef Tahir Chaudhary</a>
+                            <p>- Tahir Chaudhary is unarguably a famous icon chef of Pakistan, a culinary consultant as well a TV celebrity.</p>
+                            <a class="newricipes-button" href="#">Read more</a>
+                        </div>
+                        <div class="product-grid">
+                            <a href="#"><img src="~/images/sadat.jpg" title="product-name" /></a>
+                            <a class="product-heading" href="#">Chef Sadat Sidique</a>
+                            <p>One of the most enjoyable chefs at ARY Zauq.</p>
+                            <a class="newricipes-button" href="#">Read more</a>
+                        </div>
+                        <div class="product-grid product-lastgrid">
+                            <a href="#"><img src="~/images/asad.jpg" title="product-name" /></a>
+                            <a class="product-heading" href="#">Chef Asad</a>
+                            <p>Chef Asad Latif comes in Top Ten Chefs of Pakistan.</p>
+                            <a class="newricipes-button" href="#">Read more</a>
+                        </div>
+                        <div class="clear"> </div>
+                    </div>
+                    <!---End-Products---->
+                </div>
+                <div class="clear"> </div>
+                <!----End-main-content----->
+            </div>
+        </div>
+    </div>
+   
+    <!---End-wrap---->
+</body>
+</html>
+

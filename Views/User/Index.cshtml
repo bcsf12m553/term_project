@@ -1,0 +1,96 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model List<MvcApplication1.Model.Category>
+<div class="main-content">
+<div class="left-sidebar">
+    <div class="left-sidebar-top">
+        <h3><span>User </span>Panel</h3>
+
+        <ul>
+            <li><a href="#">Add Recipe</a></li>
+            <li><a href="#">Edit Profile</a></li>
+            
+            <div class="clear"> </div>
+        </ul>
+    </div>
+    <div class="clear"> </div>
+    <div class="left-sidebar-bottom">
+        <h3><span>Fresh</span> Recipes</h3>
+        <a href="#"><img src="~/images/fresh1.jpg" title="image-name" /></a>
+        <a class="heading" href="#">Bonorum et Maltextorum Bonorum et</a>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        <a class="button" href="#">Read more</a>
+    </div>
+    <div class="cooking-banner1">
+        <a href="#"><img src="~/images/banner1.png" title="image-name" /></a>
+    </div>
+    <div class="clear"> </div>
+</div>
+<div class="center-content">
+    <!---start-about---->
+    <div class="about">
+        <h3>Add Recipe</h3>
+
+        <form method="post" action="/User/AddRecipetoDB" enctype="multipart/form-data">
+            <fieldset>
+                <div>
+                    
+
+
+
+                    <table>
+                       
+
+                        <tr>
+                            <td><label>Recipe Name:</label></td>
+                            <td>
+                                <input type="text" class="inp-form" name="r_name" />
+                            </td>
+                                
+
+                            </tr>
+                      
+                        <tr>
+                            <td>
+                                <label>Select Category:</label>
+                            </td>
+                            <td>
+                                <select name="Category">
+                                    @foreach (var i in Model)
+                                    {
+
+                                        <option  value="@i.Category1"> @i.Category1 </option>
+
+
+
+                                    }
+                                </select><td>
+</tr>
+                        <tr>
+                            <td>
+                                <label>Description:</label>
+                            </td>
+                        </tr>
+                           
+
+</table>
+                    <textarea rows="4" cols="50" name="description"></textarea>
+                </div>
+                <br />
+
+
+                <input type="submit" value="ADD" class="form-submit" />
+                <input type="reset" value="" class="form-reset" />
+            </fieldset>
+
+        </form>
+
+    </div>
+
+    
+    <div class="clear"> </div>
+    <!----End-main-content----->
+    </div>
